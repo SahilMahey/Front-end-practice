@@ -1,0 +1,141 @@
+@import url('https://fonts.google.com/specimen/Montserrat');
+@import url('https://fonts.google.com/specimen/Fraunces');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width:100vw;
+    background-color:hsl(30, 38%, 92%)
+}
+
+.container
+{
+    height: 340px;
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    
+    
+}
+
+img
+{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.textbox
+{
+    padding: 20px;
+}
+
+h6
+{
+    letter-spacing: 5px;
+    color:  hsl(228, 12%, 48%);
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 15px;
+   
+}
+
+
+h1{
+    font-size: 24px;
+    font-family: 'Fraunces';
+    line-height: 26px;
+
+}
+
+p{
+    padding: 15px 0;
+    font-size: 10.7px;
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat';
+    font-weight: 600;
+    line-height: 20px;
+}
+.box1
+{
+    display:flex;
+    
+    align-items: center;
+    gap: 0.5em;
+    font-family: 'Fraunces';
+}
+h3
+{
+    color:  hsl(158, 36%, 37%);
+    font-weight: 700;
+}
+
+span
+{
+  color:  hsl(228, 12%, 48%);
+  font-size: 10px;
+}
+
+.box2
+{
+    margin-top: 20px;
+    height: 35px;
+    width: 170px;
+    background-color:   hsl(158, 36%, 37%);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat';
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+
+@media (max-width: 420px)
+{
+    
+    .container
+    {
+    height: 510px;
+    width: 280px;
+    display: flex;
+    flex-direction:column
+}
+
+.image
+{
+    width:280px;
+    height: 200px;
+    background-image: url('image-product-mobile.jpg');
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+p
+{
+    font-size: 14px;
+    
+}
+
+.box2{
+    width:250px;
+}
+
+
+}
