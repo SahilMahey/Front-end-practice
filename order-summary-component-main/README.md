@@ -1,0 +1,1 @@
+This is a simple and responsive shopping card made by using HTML and CSS. The figma design can be found on the frontend mentor website.
