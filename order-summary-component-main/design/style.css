@@ -99,4 +99,48 @@ p
     color: white;
     margin-bottom: 20px;
 }
+@media (max-width: 402px)
+{
+    .main
+    {
+        background-image: url('pattern-background-mobile.svg');
+       
+    }
+    .container
+    {
+        height: 430px;
+        width: 250px;
+        border-radius: 20px;
+        background-color: white;
+    }
 
+    .media-image
+    {
+        height:10;
+        width:250px;
+    }
+    
+    p,h4,a{
+        font-size: 12px;
+    }
+    h1
+    {
+        font-size: 16px;
+    }
+
+    
+
+    .box
+    {
+
+    width:200px;
+    height: 60px;
+   
+    }
+    
+    .box2
+    {   
+    width:200px;
+    height: 40px;
+    }
+}
