@@ -186,6 +186,8 @@ span
     {
     display: flex;
     min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start;
     }
     .container
     {
