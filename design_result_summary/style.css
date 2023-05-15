@@ -182,7 +182,11 @@ span
 }
 
 @media (max-width: 550px) {
-    
+    .box
+    {
+    display: flex;
+    min-height: 100vh;
+    }
     .container
     {
         display: flex;
