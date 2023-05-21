@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Lora', serif;
+}
+
+
+.container
+{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+}
+
+.box
+{
+    width: 80rem;
+    height: 40rem;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    background-image: url(bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 80rem 90rem;
+    background-position:-500px -350px;
+    
+}
+
+
+.image
+{
+  background-image: url('illustration-woman-online-desktop.svg');
+  background-repeat: no-repeat;
+  width: 40rem;
+  background-position: -60px 50px ;
+  display: flex;
+  position: relative;
+  
+}
+
+.box_image
+{
+    position: absolute;
+    left: -100px;
+    top:200px;
+}
+
+
+.content
+{
+
+  width:40rem;
+  padding: 60px;
+   
+}
+
+
+h1
+{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.content_ques
+{
+    border-bottom: 3px solid hsl(240, 5%, 91%);
+    line-height: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#button1, #button2, #button3, #button4, #button5
+{
+    background: none;
+    border: none;
+}
+.content
+{
+    overflow: hidden;
+}
+
+
+.para_ques1, .para_ques2, .para_ques3, .para_ques4, .para_ques5
+{
+    color: hsl(237, 12%, 33%);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+   
+}
+
+.para_ques1:hover, .para_ques2:hover, .para_ques3:hover, .para_ques4:hover, .para_ques5:hover 
+{
+  color: orange;
+}
+
+.answer1, .answer2, .answer3, .answer4, .answer5
+{
+    color:hsl(240, 6%, 50%);
+    font-weight: 700;
+    display: none;
+    line-height: 1.5rem;
+    margin-bottom: 5px;
+    
+}
+.question
+{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width:1067px) 
+{
+    .box
+    {
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+        height: 40rem;
+        border-radius: 20px;
+        background-color: white;
+        background-image: url(bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: 20rem;
+        background-position: center -150px;
+        position: relative;
+    }
+
+    .image
+    {
+    background-image: url('illustration-woman-online-desktop.svg');
+    background-repeat: no-repeat;
+    width: 40rem;
+    height: 30rem;
+    position: absolute;
+    z-index: 1;
+    top:-200px;
+    background-size: 20rem;
+    background-position: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .box_image
+    {   position: static;
+       margin-left: -250px;
+       margin-top: 60px;
+    }
+
+    .box_image img
+    {
+        height: 90px;
+        width: 90px;
+    }
+.content
+{
+
+  width:40rem;
+  height:40rem;
+   padding: 100px;
+  
+  align-self: center;
+   
+}
+
+h1
+{
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+}
+
+
