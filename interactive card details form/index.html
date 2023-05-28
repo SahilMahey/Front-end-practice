@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <div class="card">
+        <div class="image_back">
+            <img src="bg-card-back.png" alt="">
+            <div class="back_text">
+                <p id = "back_text_p">000</p>
+            </div>
+        </div>
+        <div class="image_front">
+            <img src="bg-card-front.png" alt="">
+            <div class="front_image-logo">
+                <img src="card-logo.svg" alt="">
+            </div>
+            <div class="front_text">
+                <p class = "middle_text_front">0000 0000 0000 0000</p>
+                <p class = "bottoml_text_front">Jane Appleseed</p>
+               <span class = "bottomr_text_front_first">00</span><span class = "bottomr_text_front_middle">/</span><span class = "bottomr_text_front_last">00</span>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <form novalidate>
+        <div class="name">
+          <label for="name"><p>CARDHOLDER NAME</p></label>
+          <input type="text" name="name" id ="name" placeholder="e.g. Jane Appleseed" autocomplete="off">
+          <div class="error_text">
+            <p>Enter Proper Name</p>
+        </div>
+       
+        </div>
+        <div class="number">
+          <label for="number"><p>CARD NUMBER</p></label>
+          <input type="text" id ="number" name="number" autocomplete="off" placeholder="e.g. 1234 5678 9123 0000" >
+          <div class="error_text">
+            <p>Wrong format, numbers only</p>
+        </div>
+        
+        </div>
+        <div class="bottom">
+          <div class="texts">
+           <p>EXP. DATE (MM/YY)</p>
+            <label for="cvc"><p>CVC</p></label>
+        </div>
+        <div class="text_box">
+            <input type="text" class="inpts" id="mm" name = "exp_date" autocomplete="off" placeholder="MM" >
+            <input type="text" class="inpts" id="yy" name = "exp_date" autocomplete="off" placeholder="YY">
+            <input type="text" class="inpts" id="cvc" name = "cvc" placeholder="e.g. 123">
+        </div>
+        <div class="error_text">
+            <p>Can't be blank</p>
+        </div>
+        <div class="error_text">
+            <p>Wrong format, numbers only</p>
+        </div>
+    </div>
+        
+        <input type="button" id="confirm" value="Confirm" onclick="get_details()">
+        </form>
+        
+    </div>
+
+    <div id="thankyou_section">
+        <div class="thank_you_card">
+            <div class="icon_comp">
+                <img src="icon-complete.svg" alt="">
+            </div>
+            <div class="text_complete">
+                <p class="thank_you">THANK YOU!</p>
+                <p class="short_para"> We've added your card details</p>
+            </div>
+
+            <div class="button_complete">
+                <input type="button" id="confirm" value="Complete">
+            </div>
+
+        </div>
+    </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
