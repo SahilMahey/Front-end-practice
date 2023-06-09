@@ -1,0 +1,34 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    
+}
+
+.mdsd
+{
+    width: fit-content;
+}
+.current_time
+{
+    height: 30px;
+    width: 120px;
+}
+.set_alarm
+{
+    width: 100%;
+}
+
+.container1, .container2, .container3
+{
+    height: 25px;
+    width: 50px;
+}
+
+input
+{
+    height: 25px;
+    width: 50px;
+}
