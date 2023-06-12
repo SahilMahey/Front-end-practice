@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
+    
     <main>
-        <button class="container1"></button>
-        <button class="container2"></button>
-        <button class="container3"></button>
-        <button class="container4"></button>
-        <button class="container5"></button>
-        <button class="container6"></button>
-        <button class="container7"></button>
-        <button class="container8"></button>
-        <button class="container9"></button>
+        <div class="span1"><span>Player 1's Turn</span></div>
         
+        <button class="box container1" data-row = "0" data-col = "0"></button>
+        <button class="box container2" data-row = "0" data-col = "1"></button>
+        <button class="box container3" data-row = "0" data-col = "2"></button>
+        <button class="box container4" data-row = "1" data-col = "0"></button>
+        <button class="box container5" data-row = "1" data-col = "1"></button>
+        <button class="box container6" data-row = "1" data-col = "2"></button>
+        <button class="box container7" data-row = "2" data-col = "0"></button>
+        <button class="box container8" data-row = "2" data-col = "1"></button>
+        <button class="box container9" data-row = "2" data-col = "2"></button>
+        <button class="reset_button" onclick="reset()">Reset</button>
     </main>
     <script src="script.js"></script>
 </body>
