@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-template-rows: repeat(6,50px);
+    place-content: center;
+    gap: 1rem;
+}
+
+main > *
+{
+    height: 50px;
+    width: 50px;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+.input
+{
+    grid-column: span 4;
+    width: 100%;
+    background-color: white;
+}
+
+.clear
+{
+    grid-column: span 4;
+    width: 100%;
+}
+
+
+
