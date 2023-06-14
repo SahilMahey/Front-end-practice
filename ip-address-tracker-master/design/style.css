@@ -1,0 +1,47 @@
+:root
+{
+    --very-dark-color: hsl(0, 0%, 17%);
+    --dark-color: hsl(0, 0%, 59%);
+    --main-font-size: 18px;
+    --main--font-family: 'Rubik','sans-serif'
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main
+{
+    min-height: 100vh;
+}
+
+.container
+{
+    background-image: url('pattern-bg-mobile.png'); 
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+}
+
+.data_display
+{
+    display:grid;
+    height: 100px;
+    grid-template-columns: repeat(3, 100px);
+    background-color: aliceblue;
+    position: absolute;
+    z-index: 1;
+}
+
+#map
+{
+    height: calc(100vh - 20rem);
+}
