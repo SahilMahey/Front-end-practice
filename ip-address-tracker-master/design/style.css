@@ -18,30 +18,107 @@ main
 
 .container
 {
-    background-image: url('pattern-bg-mobile.png'); 
-    height: 20rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-image: url('pattern-bg-desktop.png'); 
+    height: 15rem;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+h1
+{
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+.search_bar
+{
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
+}
+input
+{
+    max-width: 450px;
+    height: 50px;
    
 }
 
 .data_display
 {
-    display:grid;
-    height: 100px;
-    grid-template-columns: repeat(3, 100px);
-    background-color: aliceblue;
     position: absolute;
-    z-index: 1;
+  
+    border-radius: 20px;
+    width: 65vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25%;
+    background-color: white;
+    z-index:1;
+   display: flex;
+   flex-direction: column;
+   min-height: 150px;
+   justify-content: center;
+   align-items: center;
+}
+
+.data_ip,.data_city,.data_timezone,.data_isp 
+{
+    flex: 1;
+    
+}
+
+
+
+.para
+{
+    text-align: center;
+    font-size: var(--main-font-size);
+    font-weight: 700;
+
+}
+
+.heading
+{
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--dark-color);
+  
 }
 
 #map
 {
-    height: calc(100vh - 20rem);
+    z-index: 0;
+    height: calc(100vh - 15rem);
+    width: 100%;
+}
+
+@media (min-width : 600px)
+{
+   main
+   {
+     background: url('pattern-bg-desktop.png') no-repeat;
+     background-repeat: no-repeat;
+     background-size: cover;
+     z-index: 1;
+   }
+   .data_display
+   {
+    flex-wrap: wrap;
+    flex-direction: row;
+   
+   }
+
+   .data_border
+    {
+    border-right: 1px solid var(--dark-color);
+    }
+
+
+
+
 }
