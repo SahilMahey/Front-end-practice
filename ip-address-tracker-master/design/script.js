@@ -1,18 +1,23 @@
 
 
-var map = L.map('map').setView([0, 0], 13);
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+let lat = 0;
+let lon = 0;
+    
 
-const locationIcon = L.icon({
-    iconUrl: 'icon-location.svg',
-    iconSize: [30, 30],
-    iconAnchor: [15, 15]
+
+var map = L.map("map").setView([lon, lat], 2);
+var myIcon = L.icon({
+	iconUrl: "icon-location.svg",
+	iconAnchor: [22, 94],
+	popupAnchor: [0, -70],
 });
-
-const marker = L.marker([0, 0],{icon: locationIcon}).addTo(map)
+// add the OpenStreetMap tiles
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+	maxZoom: 19,
+	attribution:
+		'&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+}).addTo(map);
     
 
 
@@ -27,9 +32,9 @@ let get_data = async() =>
         document.getElementsByClassName('para')[1].innerHTML = data.location.city + ", "+data.location.region + data.location.postalCode
         document.getElementsByClassName('para')[2].innerHTML = data.location.timezone;
         document.getElementsByClassName('para')[3].innerHTML = data.isp;
-         
-        map.setView([data.location.latitude, data.location.longitude], 13);
-        marker.setLatLng([data.location.latitude, data.location.longitude]);
+        var marker = L.marker([data.location.lat, data.location.lng], { icon: myIcon }).addTo(map);
+		marker.bindPopup(`Current IP ${data.ip}`).openPopup();
+		map.flyTo([data.location.lat, data.location.lng], 13);
         
     }
     catch
@@ -38,4 +43,3 @@ let get_data = async() =>
     }
    
 }
-
