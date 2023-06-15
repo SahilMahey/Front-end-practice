@@ -24,22 +24,40 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 let get_data = async() =>
 {
     let ip_address  = document.getElementsByTagName('input')[0].value;
-    try 
+    if (ip_address!="")
     {
-        let make = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_yJh3T30nnO76oQrgvGgmPyJzAuREZ&ipAddress=${ip_address}`)
-        let data = await make.json()
-        document.getElementsByClassName('para')[0].innerHTML = data.ip;
-        document.getElementsByClassName('para')[1].innerHTML = data.location.city + ", "+data.location.region + data.location.postalCode
-        document.getElementsByClassName('para')[2].innerHTML = data.location.timezone;
-        document.getElementsByClassName('para')[3].innerHTML = data.isp;
-        var marker = L.marker([data.location.lat, data.location.lng], { icon: myIcon }).addTo(map);
-		marker.bindPopup(`Current IP ${data.ip}`).openPopup();
-		map.flyTo([data.location.lat, data.location.lng], 13);
+        try
+        {
+            let data;
+            let make = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_yJh3T30nnO76oQrgvGgmPyJzAuREZ&ipAddress=${ip_address}`)
+            if (make.ok) {
+                data = await make.json();
+            } else {
+                return alert("enter a valid adress");
+            }
+            
+            document.getElementsByClassName('para')[0].innerHTML = data.ip//(data.ip!=undefined) ? data.ip : "192.232.323.212";
+            document.getElementsByClassName('para')[1].innerHTML = data.location.city + ", "+data.location.region + data.location.postalCode
+            document.getElementsByClassName('para')[2].innerHTML = data.location.timezone;
+            document.getElementsByClassName('para')[3].innerHTML = data.isp;
+            var marker = L.marker([data.location.lat, data.location.lng], { icon: myIcon }).addTo(map);
+		    marker.bindPopup(`Current IP ${data.ip}`).openPopup();
+		    map.flyTo([data.location.lat, data.location.lng], 13);
         
+        }
+        catch
+        {
+            alert("enter a valid ip adress")
+        }
+        
+    
+    
     }
-    catch
+
+    else
     {
-        alert('Please enter valid ip address');
+        alert("Enter a value")
     }
+   
    
 }

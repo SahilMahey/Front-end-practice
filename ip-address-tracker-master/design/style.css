@@ -14,11 +14,12 @@
 main
 {
     min-height: 100vh;
+    background: url('pattern-bg-mobile.png') no-repeat ;
+    background-size: cover;
 }
 
 .container
 {
-    background-image: url('pattern-bg-desktop.png'); 
     height: 15rem;
     display: flex;
     flex-direction: column;
@@ -32,6 +33,7 @@ h1
     text-align: center;
     color: white;
     font-weight: 900;
+    
 }
 .search_bar
 {
@@ -44,25 +46,28 @@ input
 {
     max-width: 450px;
     height: 50px;
-   
 }
+
+.form-control {
+    border: none;
+    box-shadow: none;
+  }
 
 .data_display
 {
     position: absolute;
-  
     border-radius: 20px;
-    width: 65vw;
+    width: cacl (max-content + 5rem);
     left: 50%;
     transform: translateX(-50%);
     top: 25%;
     background-color: white;
     z-index:1;
-   display: flex;
-   flex-direction: column;
-   min-height: 150px;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 150px;
+    justify-content: center;
+    align-items: center;
 }
 
 .data_ip,.data_city,.data_timezone,.data_isp 
@@ -78,6 +83,7 @@ input
     text-align: center;
     font-size: var(--main-font-size);
     font-weight: 700;
+    padding: 0 20px;
 
 }
 
@@ -99,17 +105,16 @@ input
 
 @media (min-width : 600px)
 {
-   main
-   {
-     background: url('pattern-bg-desktop.png') no-repeat;
-     background-repeat: no-repeat;
-     background-size: cover;
-     z-index: 1;
-   }
+    main
+    {
+        background: url('pattern-bg-desktop.png') no-repeat;
+        background-size: cover;
+    }
    .data_display
    {
     flex-wrap: wrap;
     flex-direction: row;
+    min-width: 70vw;
    
    }
 
