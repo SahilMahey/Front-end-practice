@@ -8,6 +8,14 @@ Users should be able to:
 - View the optimal layout for the content depending on their device's screen size
 - See hover states for all interactive elements on the page
 
+## Links
+- Live Site URL: [https://famous-naiad-ee3022.netlify.app/]
+
+## Author
+
+- Website - [Sahil Mahey] (https://sahil-mahey.netlify.app/)
+- Frontend Mentor - [@SahilMahey](https://www.frontendmentor.io/profile/SahilMahey)
+
 
 
 
